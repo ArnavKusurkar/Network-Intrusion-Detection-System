@@ -1,5 +1,8 @@
 # Network Intrusion Detection System (NIDS)
 
+# Ethical Considerations #
+PLEASE USE THIS FOR ETHICAL REASONS ONLY. If used for any kind of malpractices, the author cannot be held responsible. This tool is intended solely for educational purposes and authorized testing on networks you own or have explicit permission to monitor. Unauthorized use of network monitoring tools is illegal and unethical. Always ensure you are compliant with all applicable laws and guidelines.
+
 ## Overview
 This project is a custom Network Intrusion Detection System (NIDS) built in Python using Scapy and Flask. It monitors network traffic in real-time, detects suspicious activities, and provides alerts via a web dashboard.
 
