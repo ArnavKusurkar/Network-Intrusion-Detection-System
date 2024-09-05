@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NIDS Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Network Intrusion Detection System Alerts</h1>
+    <ul id="alerts">
+        {% for alert in alerts %}
+            <li>{{ alert }}</li>
+        {% endfor %}
+    </ul>
+    <script>
+        setInterval(() => {
+            fetch('/alerts')
+                .then(response => response.json())
+                .then(data => {
+                    const alertsList = document.getElementById('alerts');
+                    alertsList.innerHTML = '';
+                    data.forEach(alert => {
+                        const li = document.createElement('li');
+                        li.textContent = alert;
+                        alertsList.appendChild(li);
+                    });
+                });
+        }, 5000);
+    </script>
+</body>
+</html>
+
 
